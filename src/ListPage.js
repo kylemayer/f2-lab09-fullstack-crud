@@ -15,13 +15,13 @@ export default class ListPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="duck-list">
                 {this.state.ducks.map(duck => <Link to={`ducks/${duck.id}`}>
-                <div>
+                <div className='duck'>
                     <p>{duck.name}</p>
-                    <p>{duck.mass_oz}</p>
-                    <p>{duck.category}</p>
-                    <p>{duck.feet_color}</p>
+                    <p>Size: {duck.category}</p>
+                    <p>Weight(oz): {duck.mass_oz}</p>
+                    <p>Feet Color: {duck.feet_color}</p>
                 </div>
                 </Link>)
                 }
