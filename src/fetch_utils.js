@@ -17,7 +17,7 @@ export async function getOneDuck(id) {
 export async function updateDuck(id, duckData) {
     const { body } = await request
     .put(`${URL}/ducks/${id}`)
-    .send(`duckData`);
+    .send(duckData);
 
     return body;
 }

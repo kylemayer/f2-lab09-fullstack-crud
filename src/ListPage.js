@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom'
 export default class ListPage extends Component {
 
     state = {
-        ducks: [],
+        ducksArr: [],
     }
 
     componentDidMount = async () => {
         const ducks = await getAllDucks()
 
-        this.setState({ ducks: ducks})
+        this.setState({ ducksArr: ducks})
     }
 
     render() {
         return (
             <div className="duck-list">
-                {this.state.ducks.map(duck => <Link to={`ducks/${duck.id}`}>
+                {this.state.ducksArr.map(duck => <Link to={`ducks/${duck.id}`}>
                 <div className='duck'>
                     <p>{duck.name}</p>
                     <p>Size: {duck.category}</p>
