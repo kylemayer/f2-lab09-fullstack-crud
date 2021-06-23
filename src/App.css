@@ -45,7 +45,9 @@
   transform: translateY(7px);
 }
 
-
+a {
+  text-decoration: none;
+}
 
 
 

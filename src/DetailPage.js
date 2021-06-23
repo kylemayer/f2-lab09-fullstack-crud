@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { getOneDuck, getAllCategories, updateDuck} from './fetch_utils'
+import { getOneDuck, getAllCategories, updateDuck, deleteDuck } from './fetch_utils'
 export default class DetailPage extends Component {
     state = {
         name: '',
         mass_oz: 25,
         feet_color: 'orange',
         category_id: 2,
-        categories: []
+        categories: [],
     }
 
     componentDidMount = async () => {
@@ -20,7 +20,8 @@ export default class DetailPage extends Component {
             mass_oz: duck.mass_oz,
             feet_color: duck.feet_color,
             category_id: duck.category_id,
-            categories: categories
+            categories: categories,
+            id: duck.id
         })
     }
 
@@ -38,6 +39,11 @@ export default class DetailPage extends Component {
 
     feetColorChange = e => {
         this.setState({ feet_color: e.target.value });
+    }
+
+    handleDelete = async () => {
+        await deleteDuck(this.state.id)
+        this.props.history.push('/')
     }
 
     handleSubmit = async e => {
@@ -82,8 +88,8 @@ export default class DetailPage extends Component {
                         </select>
                     </label>
                     <button>Update duck!</button>
-                    <button>Destroy this duck!</button>
                 </form>
+                <button onClick={this.handleDelete}>Destroy this duck!</button>
             </div>
         )
     }
