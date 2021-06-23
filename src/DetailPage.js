@@ -55,11 +55,19 @@ export default class DetailPage extends Component {
     render() {
         return (
             <div>
-                <h3>Update duck</h3>
+                <h3>C || U || D a duck</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Name:
                         <input value={this.state.name} onChange={this.nameChange} />
+                    </label>
+                    <label>
+                        Feet_Color:
+                        <input value={this.state.feet_color} onChange={this.feetColorChange} />
+                    </label>
+                    <label>
+                        Weight:
+                        <input value={this.state.mass_oz} type="number" onChange={this.weightChange} />
                     </label>
                     <label>
                         Category:
@@ -73,15 +81,8 @@ export default class DetailPage extends Component {
                             )}
                         </select>
                     </label>
-                    <label>
-                        Weight:
-                        <input value={this.state.mass_oz} type="number" onChange={this.weightChange} />
-                    </label>
-                    <label>
-                        Feet_Color:
-                        <input value={this.state.feet_color} onChange={this.feetColorChange} />
-                    </label>
-                    <button>Update duck</button>
+                    <button>C||U duck!</button>
+                    <button>Destroy this duck!</button>
                 </form>
             </div>
         )
