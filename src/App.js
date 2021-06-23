@@ -13,7 +13,7 @@ import Header from './Header'
 function App() {
   return (
     <Router>
-      <div className="main">
+      <div className="App">
       <Header />
         <Switch>
           <Route path="/" exact render={(routerProps) => <ListPage {...routerProps} />}

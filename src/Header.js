@@ -5,7 +5,7 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                <h3>Duck encyclopedia</h3>
+                <h3>Duck Encyclopedia</h3>
                 <p><Link to="/">Home</Link></p>
                 <p><Link to="/create">Add a duck</Link></p>
             </div>
