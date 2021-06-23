@@ -55,7 +55,7 @@ export default class DetailPage extends Component {
     render() {
         return (
             <div>
-                <h3>C || U || D a duck</h3>
+                <h3>U || D a duck</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Name:
@@ -81,7 +81,7 @@ export default class DetailPage extends Component {
                             )}
                         </select>
                     </label>
-                    <button>C||U duck!</button>
+                    <button>Update duck!</button>
                     <button>Destroy this duck!</button>
                 </form>
             </div>
