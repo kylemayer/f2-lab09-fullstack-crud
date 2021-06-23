@@ -62,7 +62,7 @@ handleSubmit = async e => {
                             <option value="4">Giant</option>
                         </select>
                     </label>
-                    <button>Create duck</button>
+                    <button>Create duck!</button>
                 </form>
             </div>
         )
